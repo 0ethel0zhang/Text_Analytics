@@ -1,0 +1,11 @@
+Student Name: Ethel Shiqi Zhang
+All programs are included in the jupyter notebook file.
+    - Task#1: Corpus collection and Corpus Descriptive analysis
+    - Task#2:Exploratory Analysis of Corpus with LDA
+    - Extra Credit
+    
+Instructions on running the programs:
+1. Download the jupyter notebook into a directory of its own.
+2. Include the data file ('ratemd.25k.all.txt') in such directory.
+3. Open the jupyter notebook and run all.
+4. The results will be saved in a file 'analysis.txt'

@@ -1,0 +1,59 @@
+1) Design Decisions:
+The task at hand (example cases in the assignment description and sample article) exhibits five distinct patterns of date-related entities.
+
+The five patterns are:
+1. "Month Day, Year" structure with optional time like "January 15, 2014 8am"
+2. "Day Month" structure variation like "the 21st of December"
+3. "Month/Day/Year" structure variations like "01/15/2014"
+4. Day of the week with optional time such as "Monday', 'Monday the 23rd', 'Monday, 2pm', and 'Monday afternoon'.
+5. Holidays like 'Christmas Day'
+
+Each pattern is thus singled out to compile to take into account its own variations.
+
+When the file is being processed, each sentence is processed sequentially by each of the five patterns to avoid potential double-counting.
+
+2) Performance calculation:
+A. input1
+confusion matrix
+1. Exact Match
+,true positive (TP), true negative(TN), false positive(FP), false negative(FN)
+absolute value,11,412,0,0
+percentages,100%, 100%, 0%, 0%
+
+precision = (TP)/(TP+FP) = 11/(11+0) = 1
+recall = (TP)/(TP+FN) = 11/(11+0) = 1
+F-score = 2 * precision * recall / (precision + recall) = 2*1*1/(1+1) = 1
+
+2. Partial Match
+true positive (TP), true negative(TN), false positive(FP), false negative(FN)
+absolute value,11,412,0,0
+percentages,100%, 100%, 0%, 0%
+
+precision = (TP)/(TP+FP) = 11/(11+0) = 1
+recall = (TP)/(TP+FN) = 11/(11+0) = 1
+F-score = 2 * precision * recall / (precision + recall) = 2*1*1/(1+1) = 1
+
+B. input2
+confusion matrix
+1. Exact Match
+,true positive (TP), true negative(TN), false positive(FP), false negative(FN)
+absolute value,10,493,0,0
+percentages,100%, 100%, 0%, 0%
+
+precision = (TP)/(TP+FP) = 10/(10+0) = 1
+recall = (TP)/(TP+FN) = 10/(10+0) = 1
+F-score = 2 * precision * recall / (precision + recall) = 2*1*1/(1+1) = 1
+
+2. Partial Match
+,true positive (TP), true negative(TN), false positive(FP), false negative(FN)
+absolute value,10,493,0,0
+percentages,100%, 100%, 0%, 0%
+
+precision = (TP)/(TP+FP) = 10/(10+0) = 1
+recall = (TP)/(TP+FN) = 10/(10+0) = 1
+F-score = 2 * precision * recall / (precision + recall) = 2*1*1/(1+1) = 1
+
+3) Analyze the result:
+Based on the select training and test data, the system is able to perform at 100% accuracy.
+All matched are exact match instead of partical matches, since the design decision was made to cover as many variations as possible.
+However, further evaluation can be done on outside sources to improve the design, where some other cases may not have been considered.

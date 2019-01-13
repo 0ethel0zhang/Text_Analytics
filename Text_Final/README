@@ -1,0 +1,9 @@
+Explain what the code does and how to run it:
+
+What the code does?
+The goal of this code is to apply sentiment analysis for movie reviews. There are several different sentiment analyzers (5 models using basic word processing + 5 models using lemmatization + 1 model using pos/neg ratio)that automatically classifies input data as either positive or negative. The analyzer is trained on training data using supervised machine learning.
+
+How to run the code?
+1. Download the jupyter notebook, and the data scource ('NRC_Emotion.txt', 'review_polarity.tar.gz') into one directory.
+2. Run all cells in the jupyter notebook.
+3. Results will be output into a answers.txt file under the same directory.
